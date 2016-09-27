@@ -65,10 +65,11 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     private String createOrderSummary(int price, boolean addWhippedCream){
-    String priceMessage = "Name: Kapitan Kunal";
-    priceMessage=priceMessage +"\nQuantity:"+ quantity;
-    priceMessage=priceMessage +"\nTotal; $"+ price ;
-    priceMessage=priceMessage+ "\nThank You!";
+    String priceMessage = "Name: Agelita Syphax";
+    priceMessage+="Add whipped cream? "+addWhippedCream;
+    priceMessage+="\nQuantity:"+ quantity;
+    priceMessage+="\nTotal; $"+ price ;
+    priceMessage+="\nThank You!";
     return priceMessage;
 }
 
