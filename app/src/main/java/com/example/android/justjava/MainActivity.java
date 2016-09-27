@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         int price= calculatePrice() ;
-        String priceMessage = createOrderSummary(price);
+        String priceMessage = createOrderSummary(price,hasWhippedCream);
         displayMessage(priceMessage);
 
 
@@ -61,9 +61,10 @@ public class MainActivity extends AppCompatActivity {
     /**
      *Create summary of the order
      * @param price of the order
+     * @param addWhippedCream whether or not client want whipped cream topping
      * @return text summary
      */
-    private String createOrderSummary(int price){
+    private String createOrderSummary(int price, boolean addWhippedCream){
     String priceMessage = "Name: Kapitan Kunal";
     priceMessage=priceMessage +"\nQuantity:"+ quantity;
     priceMessage=priceMessage +"\nTotal; $"+ price ;
