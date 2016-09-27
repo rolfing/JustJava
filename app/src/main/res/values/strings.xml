@@ -6,5 +6,7 @@
     <string name="order_summary">Order summary</string>
     <string name="minussign">-</string>
     <string name="plussign">+</string>
+    <string name="topping">Toppings</string>
+    <string name="cream">Whipped Cream</string>
 
 </resources>
