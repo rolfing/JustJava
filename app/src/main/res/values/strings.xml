@@ -8,5 +8,7 @@
     <string name="plussign">+</string>
     <string name="topping">Toppings</string>
     <string name="cream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="name">Name</string>
 
 </resources>
