@@ -1,5 +1,7 @@
 package com.example.android.justjava;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -21,7 +23,7 @@ import static com.example.android.justjava.R.string.cream;
 public class MainActivity extends AppCompatActivity {
 
 
-    int quantity =0;
+    int quantity =0 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         if (quantity < 1){
-            Toast.makeText(getApplicationContext(), "You can not order less than 1 cup  of coffee!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You can not order less than 1 cup  of coffee!", Toast.LENGTH_SHORT).show();
             return;
 
         }
@@ -73,6 +75,13 @@ public class MainActivity extends AppCompatActivity {
 
         int price = calculatePrice(hasWhippedCream, hasChocolate);
         String priceMessage = createOrderSummary(name,price, hasWhippedCream, hasChocolate);
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee order for "+name);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+
         displayMessage(priceMessage);
 
 
