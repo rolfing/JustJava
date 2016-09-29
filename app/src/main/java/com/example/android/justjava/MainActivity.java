@@ -78,14 +78,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee order for "+name);
+        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
 
-        displayMessage(priceMessage);
-
-
-    }
+        }
 
 
     /**
@@ -136,11 +134,5 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView OrderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        OrderSummaryTextView.setText(message);
-    }
+
 }
