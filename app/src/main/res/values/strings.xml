@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java!</string>
     <string name="price_text">Price</string>
     <string name="quantity_text">quantity</string>
@@ -6,9 +6,19 @@
     <string name="order_summary">Order summary</string>
     <string name="minussign">-</string>
     <string name="plussign">+</string>
+
+    <!--Text for list of topping-[Character limit 20]-->
     <string name="topping">Toppings</string>
     <string name="cream">Whipped Cream</string>
     <string name="chocolate">Chocolate</string>
+
+    <!-- Thank you message in order summary java file-[Char limit=none]-->
+    <string name="thank_you">Thank you</string>
+
+    <!--Name for the order summary.t will be shown in the format of user's name [char limit= none]-->
+
+    <string name="order_summary_name">Name: <xliff:g id="name" example="Michel">%s</xliff:g></string>
+    <!--Text for email field-->
     <string name="name">Name</string>
 
 </resources>
